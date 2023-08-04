@@ -13,6 +13,12 @@
 		8A13B7C52A71527700343BBE /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A13B7C42A71527700343BBE /* MessagesViewController.swift */; };
 		8A13B7C82A71527700343BBE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A13B7C62A71527700343BBE /* MainInterface.storyboard */; };
 		8A13B7CA2A71527A00343BBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A13B7C92A71527A00343BBE /* Assets.xcassets */; };
+		8A7186AF2A789458005A0424 /* coins-flip-tails.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8A7186AE2A789458005A0424 /* coins-flip-tails.mp4 */; };
+		8A7186B02A789458005A0424 /* coins-flip-tails.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8A7186AE2A789458005A0424 /* coins-flip-tails.mp4 */; };
+		8A7186B22A789461005A0424 /* coin-flip-heads.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8A7186B12A789461005A0424 /* coin-flip-heads.mp4 */; };
+		8A7186B32A789461005A0424 /* coin-flip-heads.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8A7186B12A789461005A0424 /* coin-flip-heads.mp4 */; };
+		8A7186B82A797443005A0424 /* coin.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A7186B72A797443005A0424 /* coin.png */; };
+		8A7186B92A797443005A0424 /* coin.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A7186B72A797443005A0424 /* coin.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,9 @@
 		8A13B7C72A71527700343BBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		8A13B7C92A71527A00343BBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A13B7CB2A71527A00343BBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A7186AE2A789458005A0424 /* coins-flip-tails.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "coins-flip-tails.mp4"; sourceTree = "<group>"; };
+		8A7186B12A789461005A0424 /* coin-flip-heads.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "coin-flip-heads.mp4"; sourceTree = "<group>"; };
+		8A7186B72A797443005A0424 /* coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coin.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +93,9 @@
 		8A13B7B52A71527300343BBE /* CoinFlip */ = {
 			isa = PBXGroup;
 			children = (
+				8A7186B72A797443005A0424 /* coin.png */,
+				8A7186AE2A789458005A0424 /* coins-flip-tails.mp4 */,
+				8A7186B12A789461005A0424 /* coin-flip-heads.mp4 */,
 				8A13B7B62A71527600343BBE /* Assets.xcassets */,
 			);
 			path = CoinFlip;
@@ -187,7 +199,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A7186B82A797443005A0424 /* coin.png in Resources */,
 				8A13B7B72A71527600343BBE /* Assets.xcassets in Resources */,
+				8A7186B22A789461005A0424 /* coin-flip-heads.mp4 in Resources */,
+				8A7186AF2A789458005A0424 /* coins-flip-tails.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +211,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A13B7CA2A71527A00343BBE /* Assets.xcassets in Resources */,
+				8A7186B92A797443005A0424 /* coin.png in Resources */,
+				8A7186B32A789461005A0424 /* coin-flip-heads.mp4 in Resources */,
 				8A13B7C82A71527700343BBE /* MainInterface.storyboard in Resources */,
+				8A7186B02A789458005A0424 /* coins-flip-tails.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
