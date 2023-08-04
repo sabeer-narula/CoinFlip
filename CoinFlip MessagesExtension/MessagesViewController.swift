@@ -129,7 +129,7 @@ class MessagesViewController: MSMessagesAppViewController {
     let gifURLTails = "/Users/sabeernarula/Desktop/IMessage Coin Flip/CoinFlip/CoinFlip/coins-flip-tails.mp4"
 
     @IBOutlet weak var FlipCoinResult: UILabel!
-    // hello
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -153,10 +153,37 @@ class MessagesViewController: MSMessagesAppViewController {
 
     
     @IBAction func FlipCoinButton(_ sender: Any) {
-        // Remove the previous observer
-        NotificationCenter.default.removeObserver(self, name: .AVPlayerItemDidPlayToEndTime, object: player.currentItem)
+        // Create a message that invites the recipient to flip the coin
+        let layout = MSMessageTemplateLayout()
+        layout.caption = "Tap to flip the coin..."
+        // Set an image that represents an unflipped coin
+        layout.image = UIImage(named: "unflipped-coin")
 
-        // Now flip the coin and display the result
+        let message = MSMessage()
+        message.layout = layout
+
+        activeConversation?.insert(message, completionHandler: nil)
+    }
+
+
+
+
+    
+    @objc func playerDidFinishPlaying(_ notification: Notification) {
+        if let playerItem = notification.object as? AVPlayerItem {
+            playerItem.seek(to: CMTimeMakeWithSeconds(0, preferredTimescale: 600), completionHandler: nil)
+            player.pause()
+        }
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    override func willBecomeActive(with conversation: MSConversation) {
+        super.willBecomeActive(with: conversation)
+
+        // Flip the coin and display the result
         let coinFlipResult = Bool.random()
         let resultString = coinFlipResult ? "Heads" : "Tails"
         let videoName = coinFlipResult ? "coin-flip-heads" : "coins-flip-tails"
@@ -172,29 +199,12 @@ class MessagesViewController: MSMessagesAppViewController {
             playerViewController.player = player
             playerViewController.player?.seek(to: .zero)
             playerViewController.player?.play() // play the video
-
-            // Create a message ready to be sent
-            let layout = MSMessageTemplateLayout()
-            layout.caption = "Flipping a coin..."
-            layout.mediaFileURL = videoURL
-
-            let message = MSMessage()
-            message.layout = layout
-
-            activeConversation?.insert(message, completionHandler: nil)
         }
     }
+
 
     
-    @objc func playerDidFinishPlaying(_ notification: Notification) {
-        if let playerItem = notification.object as? AVPlayerItem {
-            playerItem.seek(to: CMTimeMakeWithSeconds(0, preferredTimescale: 600), completionHandler: nil)
-            player.pause()
-        }
-    }
 
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
+
 
 }
