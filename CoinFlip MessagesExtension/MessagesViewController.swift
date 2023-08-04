@@ -129,7 +129,7 @@ class MessagesViewController: MSMessagesAppViewController {
     let gifURLTails = "/Users/sabeernarula/Desktop/IMessage Coin Flip/CoinFlip/CoinFlip/coins-flip-tails.mp4"
 
     @IBOutlet weak var FlipCoinResult: UILabel!
-    // hi
+    // hello
 
     override func viewDidLoad() {
         super.viewDidLoad()
